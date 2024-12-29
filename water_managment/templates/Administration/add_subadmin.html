@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ghy7656, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="subadmin.css">
+</head>
+<body>
+    <div class="main">
+
+    <h1 class="main1">Registration</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="">Name:</label>
+    <input type="text" value="" name="Name"><br>
+    <div class="row">
+        <div class="col-10">
+            <label for="Age">Age</label>
+        
+            <input type="text"  name="Age">
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="Gender">Gender</label>
+            
+                <input type="text" name="Gender">
+            </div>
+        
+        Phone<input type="text" name="Phone"> <br>
+        Email<input type="text" name="Email"> <br>  
+        username<input type="text" name="username"> <br>
+        password<input type="text" name="password"> <br>
+        <input type="submit" value="Submit" class="main2">       
+
+
+</form>
+</div>
+</body>
+</html>

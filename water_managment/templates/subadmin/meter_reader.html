@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ghy7656, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="meter.css">
+</head>
+<body>
+    <div class="main">
+
+    <h1 class="main1">Meter reader</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    Name<input type="text" name="Name"><br>
+    
+    <div class="row">
+        <div class="col-10">
+            <label for="Age" name="">Age:</label>
+        
+            <input type="text" name="Age">
+        </div>
+        Phone<input type="text" name="Phone"> <br>
+       Gender <input type="text" name="Gender"> <br>
+        Email<input type="text" name="Email"> <br> 
+        Area<select name="area">
+            {%for i in val%}
+            <option value="{{i.id}}">{{i.Areas}}</option>
+            {%endfor%}
+        </select><br>
+        Username<input type="text" name="username"><br>
+        Password<input type="text" name="password"><br>
+        
+        <input type="submit" value="Register" class="main2">       
+
+
+</form>
+</div>
+</body>
+</html>

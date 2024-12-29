@@ -1,0 +1,50 @@
+<!-- notification_create.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Notification</title>
+</head>
+<body>
+
+<h2>Create Notification</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <!-- Notification Field -->
+    <div>
+        <label for="id_Notification">Notification:</label>
+        <input type="text" name="Notification" id="id_Notification" value="{{ form.Notification.value }}">
+        {% if form.Notification.errors %}
+            <ul>
+                {% for error in form.Notification.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    
+    <!-- Date Field -->
+    <div>
+        <label for="id_Date">Date:</label>
+        <input type="date" name="Date" id="id_Date" value="{{ form.Date.value }}">
+        {% if form.Date.errors %}
+            <ul>
+                {% for error in form.Date.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit">Save Notification</button>
+</form>
+
+<!-- Link back to notification list -->
+<a href="{% url 'notification_list' %}">Back to Notifications List</a>
+
+</body>
+</html>

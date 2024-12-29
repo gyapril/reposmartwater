@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+    <body>
+    <table border="1"> 
+        <tr>
+            <th> Name</th>     
+            <th>Details</th>
+            <th>Connection Number</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for i in val %}
+        <tr>
+        
+            <td>{{i.USER.Name}}</td>
+            <td><a href="{{i.Report.url}}" target="_blank">view</a></td>
+            <td>{{i.ConnectionNo}}</td>
+            <td>{{i.Date}}</td>
+            <td>{{i.status}}</td>
+            <td>    
+                <a href="/approve_connection/{{i.id}}">Accept</a>
+                <a href="reject_connection/{{i.id}}">reject</a>
+            </td>
+        </tr>
+        {% endfor %}  
+</table> 
+</body>
+</html>

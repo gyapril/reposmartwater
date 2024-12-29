@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(https://cdn.pixabay.com/photo/2022/01/28/18/32/leaves-6975462_640.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.one{
+    margin-left: 550px;
+    margin-top: 150px;
+    padding: 10px;
+    background-color: rgba(219, 218, 225, 0.5);
+    height: 300px;
+    width: 300px;
+}
+.two{
+    padding: 10px;
+    color: rgb(43, 29, 199);
+    margin-left:  100px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 50px;
+}
+input{
+     padding:5px;
+     margin-top: 8px;
+     border-radius: 10px;
+     border: none;
+     margin-left: 40px;
+     width: 200px;
+}
+form{
+    
+    margin-top: 70px;
+}

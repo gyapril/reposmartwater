@@ -1,0 +1,44 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ghy7656, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'edit_subadmin.css' %}">
+</head>
+<body>
+    <div class="main">
+
+    <h1 class="main1">Registration</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="">Name:</label>
+    <input type="text" name="Name" value="{{ obj.Name }}"><br>
+    <div class="row">
+        <div class="col-10">
+            <label for="Age">Age</label>
+        
+            <input type="text"  name="Age" value="{{ obj.Age }}"><br>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="Gender">Gender</label>
+                <label for="">MALE</label>
+                <input type="radio" value="MALE" name="Gender" checked>
+                <label for="">FEMALE</label>
+                <input type="radio" value="FEMALE" name="Gender">
+                <label for="">OTHER</label>
+                <input type="radio" value="OTHER" name="Gender">
+                
+            </div>
+        
+        Phone<input type="text" name="Phone" value="{{ obj.Phone}}"> <br>
+        Email<input type="text" name="Email" value="{{ obj.Email}}"> <br>  
+
+        <input type="submit" value="Submit" class="main2">       
+
+
+</form>
+</div>
+</body>
+</html>

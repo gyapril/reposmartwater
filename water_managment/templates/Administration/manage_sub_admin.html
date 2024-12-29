@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Page</title>
+    
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>View Page</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+        
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Age }}</td>
+        <td>{{ i.Gender }}</td>
+        <td>{{ i.Phone }}</td>
+        <td>{{ i.Email }}</td>
+        <td>{{ i.Actions }}</td>
+        <td>
+            <a href="/EditSubAdmin/{{i.id}}">Edit</a>
+            <a href="/DelSubAdmin/{{i.LOGIN.id}}/">Delete</a>
+        </td>
+        {% endfor %}
+        <tr>
+            <a href="/add_subadmin">add</a>
+        </tr>
+    
+    <!-- Add more rows as needed -->
+</table>
+
+</body>
+</html>

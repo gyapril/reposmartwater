@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="connection page.css">
+</head>
+<body>
+    <div class="connetion1">
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>User</td>
+                <td>Connection No</td>
+                <td>Report</td>
+                <td>Date</td>
+                
+            </tr>
+            {% for i in val %}
+            <tr>
+                <td>{{ i.USER.Name }}</td>
+                <td>{{ i.ConnectionNo  }}</td>
+                <td>{{ i.Report }}</td>
+                <td>{{ i.Date }}</td>
+                </tr>
+                
+                {% endfor %}
+        </table>
+    </form>
+    </div>
+</body>
+</html>

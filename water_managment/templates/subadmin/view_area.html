@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Management - View Only</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Area Management - View Only</h1>
+</header>
+
+<div class="container">
+    <h2>Area List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Area ID</th>
+                <th>Area Name</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+              
+            </tr>
+            
+        </thead>
+        <tbody>
+            {% for i in obj %}
+            <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.Areas}}</td>
+        <td>{{i.Description}}</td>
+    <td><a href="/EditArea/{{i.id}}">Edit</a></td>
+    <td><a href="/DelArea/{{i.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+        
+</tbody>
+        
+                
+    </table>
+</div>
+
+</body>
+</html>

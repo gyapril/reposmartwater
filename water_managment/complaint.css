@@ -1,0 +1,23 @@
+.one{
+  /* float:right; */
+  padding: 6px 10px;
+  border: none;
+  cursor:pointer;
+  border-radius: 3px;
+}
+.action1{
+    background-color:green;
+    height: 20px;
+    width: 20px;
+    margin-left: 60px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    
+
+}
+
+
+
+ .username{
+    border: none;
+ }
